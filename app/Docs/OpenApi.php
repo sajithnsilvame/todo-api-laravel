@@ -4,9 +4,9 @@ namespace App\Docs;
 
 /**
  * @OA\Info(
- *     title="My API",
+ *     title=L5_SWAGGER_CONST_APP_NAME,
  *     version="1.0",
- *     description="This is the API documentation for My API."
+ *     description=L5_SWAGGER_CONST_APP_DESCRIPTION
  * )
  * 
  * @OA\Server(

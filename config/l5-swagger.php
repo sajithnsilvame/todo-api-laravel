@@ -312,6 +312,8 @@ return [
          * Constants which can be used in annotations
          */
         'constants' => [
+            'L5_SWAGGER_CONST_APP_NAME' => env('L5_SWAGGER_CONST_APP_NAME', 'My API'),
+            'L5_SWAGGER_CONST_APP_DESCRIPTION' => env('L5_SWAGGER_CONST_APP_DESCRIPTION', 'This is the API documentation for My API.'),
             'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://127.0.0.1:8000/api'),
         ],
     ],
