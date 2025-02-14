@@ -1,0 +1,185 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My API",
+        "description": "This is the API documentation for My API.",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/api",
+            "description": "API Server"
+        }
+    ],
+    "paths": {
+        "/category": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Display a listing of the resource",
+                "operationId": "91fc23f78e8b18b8cd5d4650eddea6ae",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Store a newly created resource in storage",
+                "operationId": "eff1cd45aae877fc48e08a32f5715e40",
+                "requestBody": {
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Resource created successfully"
+                    }
+                }
+            }
+        },
+        "/category/{id}": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Display the specified resource",
+                "operationId": "7234caf6f0b49788aef6338b9a4827b1",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Update the specified resource in storage",
+                "operationId": "ef31417bef2ea9451d74687cf25be748",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Resource updated successfully"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Remove the specified resource from storage",
+                "operationId": "1855b7bc010fb96dfe5ac9302c14deb5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Resource deleted successfully"
+                    }
+                }
+            }
+        },
+        "/product": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "d45890014d84707a4f2404958ec006f6",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of the resource"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "9adaf36850e8a9918f6bb40c2edc5b13",
+                "responses": {
+                    "201": {
+                        "description": "Store a newly created resource in storage"
+                    }
+                }
+            }
+        },
+        "/product/{id}": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "05c3a1f18e8ecffde6f10f57f95214b2",
+                "responses": {
+                    "200": {
+                        "description": "Display the specified resource"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "354881bc831e89db61c3730a96a50e43",
+                "responses": {
+                    "200": {
+                        "description": "Update the specified resource in storage"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "bf7ab901dd38d76d8666f436f0aecd87",
+                "responses": {
+                    "204": {
+                        "description": "Remove the specified resource from storage"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Category",
+            "description": "Category"
+        },
+        {
+            "name": "Product",
+            "description": "Product"
+        }
+    ]
+}
