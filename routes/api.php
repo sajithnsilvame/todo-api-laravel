@@ -8,7 +8,11 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/product', [ProductController::class, 'index']);
+// 🔒 Protect the GET /product route
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::get('/product', [ProductController::class, 'index']);
+});
+
 Route::post('/product', [ProductController::class, 'store']);
 Route::get('/product/{id}', [ProductController::class, 'show']);
 Route::put('/product/{id}', [ProductController::class, 'update']);

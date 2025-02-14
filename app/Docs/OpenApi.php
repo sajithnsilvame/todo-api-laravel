@@ -13,5 +13,13 @@ namespace App\Docs;
  *     url=L5_SWAGGER_CONST_HOST,
  *     description="API Server"
  * )
+ * 
+ * @OA\SecurityScheme(
+ *     securityScheme="bearerAuth",
+ *     type="http",
+ *     scheme="bearer",
+ *     bearerFormat="JWT",
+ *     description="Enter your Bearer token in the format **'Bearer {token}'**"
+ * )
  */
 class OpenApi {}

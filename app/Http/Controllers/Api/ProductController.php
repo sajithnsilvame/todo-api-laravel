@@ -13,6 +13,7 @@ class ProductController extends Controller
      * @OA\Get(
      *     path="/product",
      *     tags={"Product"},
+     *     security={{"bearerAuth": {}}},
      *     @OA\Response(response="200", description="Display a listing of the resource")
      * )
      */

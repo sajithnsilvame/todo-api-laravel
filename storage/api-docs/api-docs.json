@@ -122,7 +122,12 @@
                     "200": {
                         "description": "Display a listing of the resource"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "post": {
                 "tags": [
@@ -169,6 +174,16 @@
                         "description": "Remove the specified resource from storage"
                     }
                 }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "description": "Enter your Bearer token in the format **'Bearer {token}'**",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
             }
         }
     },
