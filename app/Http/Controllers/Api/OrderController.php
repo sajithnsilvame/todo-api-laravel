@@ -1,18 +1,18 @@
 <?php
 
-namespace DummyNamespace;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 
 
-class DummyClass extends Controller
+class OrderController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/{{CONTROLLER_ROUTE}}",
-     *     tags={"{{CONTROLLER_NAME}}"},
+     *     path="/order",
+     *     tags={"Order"},
      *     summary="Display a listing of the resource",
      *     @OA\Response(
      *         response=200,
@@ -27,8 +27,8 @@ class DummyClass extends Controller
 
     /**
      * @OA\Post(
-     *     path="/{{CONTROLLER_ROUTE}}",
-     *     tags={"{{CONTROLLER_NAME}}"},
+     *     path="/order",
+     *     tags={"Order"},
      *     summary="Store a newly created resource in storage",
      *     @OA\RequestBody(
      *         required=true,
@@ -46,8 +46,8 @@ class DummyClass extends Controller
 
     /**
      * @OA\Get(
-     *     path="/{{CONTROLLER_ROUTE}}/{id}",
-     *     tags={"{{CONTROLLER_NAME}}"},
+     *     path="/order/{id}",
+     *     tags={"Order"},
      *     summary="Display the specified resource",
      *     @OA\Parameter(
      *         name="id",
@@ -68,8 +68,8 @@ class DummyClass extends Controller
 
     /**
      * @OA\Put(
-     *     path="/{{CONTROLLER_ROUTE}}/{id}",
-     *     tags={"{{CONTROLLER_NAME}}"},
+     *     path="/order/{id}",
+     *     tags={"Order"},
      *     summary="Update the specified resource in storage",
      *     @OA\Parameter(
      *         name="id",
@@ -93,8 +93,8 @@ class DummyClass extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/{{CONTROLLER_ROUTE}}/{id}",
-     *     tags={"{{CONTROLLER_NAME}}"},
+     *     path="/order/{id}",
+     *     tags={"Order"},
      *     summary="Remove the specified resource from storage",
      *     @OA\Parameter(
      *         name="id",

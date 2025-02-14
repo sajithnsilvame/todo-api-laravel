@@ -112,6 +112,106 @@
                 }
             }
         },
+        "/order": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Display a listing of the resource",
+                "operationId": "b92f8bebe5d419d9a657f1ee0467233a",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Store a newly created resource in storage",
+                "operationId": "c296b507c1437ce5aa3ff36770011b90",
+                "requestBody": {
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Resource created successfully"
+                    }
+                }
+            }
+        },
+        "/order/{id}": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Display the specified resource",
+                "operationId": "a18b26bce3bbf7bb2008738114dc8358",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Update the specified resource in storage",
+                "operationId": "b2c8150f02818dbe89b7ecd6b51bd319",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Resource updated successfully"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Order"
+                ],
+                "summary": "Remove the specified resource from storage",
+                "operationId": "90eed7c4ac43925a90e8beeb3cfb5c7a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Resource deleted successfully"
+                    }
+                }
+            }
+        },
         "/product": {
             "get": {
                 "tags": [
@@ -191,6 +291,10 @@
         {
             "name": "Category",
             "description": "Category"
+        },
+        {
+            "name": "Order",
+            "description": "Order"
         },
         {
             "name": "Product",
